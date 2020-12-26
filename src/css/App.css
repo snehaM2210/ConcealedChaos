@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #fafafa;
+  padding-bottom: 70px;
+}
+
+.app__headerContainer {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.app__header {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+}
+
+.app__headerImage {
+  object-fit: contain;
+}

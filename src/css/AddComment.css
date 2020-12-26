@@ -1,0 +1,12 @@
+.addComment {
+  padding: 0 20px 20px;
+}
+
+.addComment__form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.addComment .MuiTextField-root {
+  width: 100%;
+}
