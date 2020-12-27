@@ -2,10 +2,11 @@ import React from "react";
 import "../css/Logo.css";
 
 function Logo() {
+
     return ( <
         img className = "logo"
-        src = ""
-        alt = "LOGO" /
+        src = { require('../img/logo.png') }
+        alt = "" /
         >
     );
 }
