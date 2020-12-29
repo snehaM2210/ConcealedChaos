@@ -1,39 +1,47 @@
-.imageUpload .imageUpload__modalButton {
-  position: fixed;
-  bottom: 0;
-  border-radius: 0;
-  z-index: 1;
+.imageUpload {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0.75rem;
+  background-color: white;
+  border: 1px solid lightgrey;
 }
 
-.imageUpload__form {
+.writePost__container {
+  border-radius: 30px;
+  border: 1px solid rgb(124, 129, 131);
+  cursor: pointer;
+}
+.writePost__container:hover {
+  background-color: rgb(236, 236, 236);
+}
+.writePost__main {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 60%;
-  margin-left: auto;
+  align-items: center;
+  padding: 0 5px;
+}
+.writePost__main p {
+  margin-left: 1rem;
+}
+
+.modal {
+  margin: 0 auto;
+}
+
+.modal__body {
+  max-width: 500px !important;
+  width: 100%;
+}
+.modal__formButtons {
+  width: 100%;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.imageUpload__text {
+  margin-top: 2rem;
   margin-right: auto;
 }
-
-.imageUpload > *:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-.imageUpload__input,
-.imageUpload__progress,
-.imageUpload label,
-.imageUpload button {
-  width: 100%;
-}
-
-.imageUpload .MuiAlert-root {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
-
-.imageUpload__text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.imageUpload__text span i {
+  color: green;
 }

@@ -1,12 +1,15 @@
 .comments {
-  padding-bottom: 10px;
-}
-
-.comments__text {
   padding: 0 20px;
-  font-weight: normal;
+}
+.comments__container {
+  margin-bottom: 0.5rem;
+  display: flex;
 }
 
-.comments__text strong {
-  margin-right: 10px;
+.comments__container div {
+  color: black;
+}
+.comments__container p {
+  font-size: 0.9rem;
+  color: #696969;
 }

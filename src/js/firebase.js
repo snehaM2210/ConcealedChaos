@@ -1,12 +1,12 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBqrTFkkKeuo3jjxjTTLaKAx4z_BWuw0v8",
-  authDomain: "random-8e0b6.firebaseapp.com",
-  projectId: "random-8e0b6",
-  storageBucket: "random-8e0b6.appspot.com",
-  messagingSenderId: "869692049146",
-  appId: "1:869692049146:web:f64f0962b2011bfa8bab43"
+    apiKey: "AIzaSyBJvXlzhzAo5i3QWeRiWDY0Aa7H_wdhkbA",
+    authDomain: "fayell.firebaseapp.com",
+    projectId: "fayell",
+    storageBucket: "fayell.appspot.com",
+    messagingSenderId: "1053837051843",
+    appId: "1:1053837051843:web:6be1d113549626d4c61f76"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
@@ -14,4 +14,4 @@ const db = firebaseApp.firestore();
 const auth = firebase.auth();
 const storage = firebase.storage();
 
-export { db, auth ,storage};
+export { db, auth, storage };
