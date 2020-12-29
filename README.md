@@ -7,6 +7,7 @@
 </p>
 
 ### Introduction
+
 Since 2013, millenials have seen a 47% increase in major- depression diagnoses. The overall rate increased from 3% to 4.4% among 18-34 years old. The reasons are not bounded nor they are instant, but it's observed that people between the age limit 18-34 are hit by failures in their lives(it may be career, Relationship , family problems etc.). They lack self motivation at the end and loose hopes from their life this gives a way to depression. Thus we through our website wish to give a guidance to handle all such circumstances by giving them motivation and presenting examples of others. Through our website people can share their failures and success stories in person or ananomously . This would build a strong community of motivated people who could combat all the life challenges and could reach the pinnacle.
 
 Failure is not something to be ashamed off. We let you share your failures to the world and find relevant solutions.
@@ -14,17 +15,17 @@ Failure is not something to be ashamed off. We let you share your failures to th
 ### Features
 
 - Community/network builder
-<br/>- User friendly interface
-<br/>- User experience and responsive design
-<br/>- Information/experience exchange 
-<bt/>- Tackles real life challenges like depression, stress.
-<br/>- Powerful storytelling
-<br/>- Minimal requirements needed
-<br/>- Accessible from anywhere and anytime
-<br/>- Get instant insights
-<br/>- Access Control and User Management
-<br/>- Cloud-hosted platform
-<br/>- Eligible for all age groups
+- User friendly interface
+- User experience and responsive design
+- Information/experience exchange 
+- Tackles real life challenges like depression, stress.
+- Powerful storytelling
+- Minimal requirements needed
+- Accessible from anywhere and anytime
+- Get instant insights
+- Access Control and User Management
+- Cloud-hosted platform
+- Eligible for all age groups
 
 ### How  it can help the community
 
@@ -39,30 +40,30 @@ In short, a website that will spread positivity and a ray of sunshine to all the
 ### Workflow
 ### Software Used
 
-Figma
-<br/>Illustrator
-<br/>Node.js
-<br/>React.js
-<br/>HTML5
-<br/>CSS3
-<br/>JavaScript
-<br/>Reactstrap
+- Figma
+- Illustrator
+- Node.js
+- React.js
+- HTML5
+- CSS3
+- JavaScript
+- Reactstrap
 
 ### Future Plans for Feature Enhancement
 
-We would add more features like -<br/>
-<b>virtual interaction</b> <br/>
-<b>counselling services</b> <br/>
-<b>linking motivational podcasts</b> <br/>
-<b>career guidance</b> <br/>
-<b>live interactive sessions</b> ,etc.
+We would add more features like -
+- virtual interaction 
+- counselling services
+- linking motivational podcasts
+- career guidance
+- live interactive sessions, etc.
 
 ### Team Members
 
-Sneha Mallik
-<br/>Divya Sri Dharimisetti
-<br/>Parwin Akhtari
-<br/>Prachi Nandi
+- Sneha Mallik
+- Divya Sri Dharimisetti
+- Parwin Akhtari
+- Prachi Nandi
 
 
 
