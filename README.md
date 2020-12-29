@@ -38,8 +38,8 @@ In short, a website that will spread positivity and a ray of sunshine to all the
 ### Workflow
 ### Software Used
 
-Figma(<--)
-Illustrator
+Figma
+<br/>Illustrator
 Node.js
 React.js
 HTML
