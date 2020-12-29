@@ -25,6 +25,10 @@ Failure is not something to be ashamed off. We let you share your failures to th
 
 -Powerful storytelling
 
+### How  it can help the community
+### Software Used
+###Future Plans for Feature Enhancement
+### Members
 
 
 
