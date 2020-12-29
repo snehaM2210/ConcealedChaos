@@ -48,11 +48,11 @@ We would add more features like
 virtual interaction, councilling services, Linking  Motivational Podcasts, career guidance.
 
 
-### Members
+### Team Members
 
 Sneha Mallik
-<br/>Divya
-<br/>Parween
+<br/>Divya Sri Dharimisetti
+<br/>Parwin Akhtari
 <br/>Prachi Nandi
 
 
