@@ -14,16 +14,11 @@ Failure is not something to be ashamed off. We let you share your failures to th
 ### Features
 
 -community/network builder
-
--user friendly interface
-
--user experience and responsive design
-
--Information/experience exchange 
-
--Tackles real life challenges like depression, stress.
-
--Powerful storytelling
+<br/>-user friendly interface
+<br/>-user experience and responsive design
+<br/>-Information/experience exchange 
+<bt/>-Tackles real life challenges like depression, stress.
+<br/>-Powerful storytelling
 
 ### How  it can help the community
 
@@ -40,12 +35,12 @@ In short, a website that will spread positivity and a ray of sunshine to all the
 
 Figma
 <br/>Illustrator
-Node.js
-React.js
-HTML
-CSS
-SCSS
-Reactstrap
+<br/>Node.js
+<br/>React.js
+<br/>HTML5
+<br/>CSS3
+<br/>SCSS
+<br/>Reactstrap
 
 ### Future Plans for Feature Enhancement
 
@@ -56,9 +51,9 @@ virtual interaction, councilling services, Linking  Motivational Podcasts, caree
 ### Members
 
 Sneha Mallik
-Divya
-Parween
-Prachi Nandi
+<br/>Divya
+<br/>Parween
+<br/>Prachi Nandi
 
 
 
