@@ -7,7 +7,8 @@ function Posts({ user }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    db.collection('posts')
+    const unsub = db
+      .collection('posts')
       .orderBy('timestamp', 'desc')
       .onSnapshot((snapshot) => {
         setPosts(
@@ -17,6 +18,8 @@ function Posts({ user }) {
           }))
         );
       });
+
+    return unsub;
   }, []);
 
   return (
@@ -32,6 +35,7 @@ function Posts({ user }) {
           imageURL={post.imageURL}
           tags={post.failTags}
           title={post.title}
+          userEmail={post.userEmail}
         />
       ))}
     </div>

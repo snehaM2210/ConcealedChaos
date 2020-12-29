@@ -86,7 +86,14 @@ export default function Login({ user, setUser }) {
             open={Boolean(anchorEl)}
             onClose={handleCloseMenu}
           >
-            <MenuItem onClick={handleCloseMenu}>Profile</MenuItem>
+            <MenuItem
+              onClick={() => {
+                handleCloseMenu();
+                history.push('/myprofile');
+              }}
+            >
+              Profile
+            </MenuItem>
             <MenuItem
               onClick={() => {
                 handleCloseMenu();

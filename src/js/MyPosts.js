@@ -1,26 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { makeStyles, Typography } from "@material-ui/core";
-import { db } from "./firebase";
-import Post from "./Post";
+import React, { useState, useEffect } from 'react';
+import { makeStyles, Typography } from '@material-ui/core';
+import { db } from './firebase';
+import Post from './Post';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    width: "600px",
-    margin: "auto",
-    marginTop: "1rem",
+    width: '600px',
+    margin: 'auto',
+    marginTop: '1rem',
   },
 }));
 
 const MyPosts = ({ user }) => {
   const classes = useStyles();
   const [posts, setPosts] = useState([]);
+  console.log('user from my posts is', user);
 
   useEffect(() => {
     if (user) {
       console.log(user);
-      db.collection("posts")
-        .where("userName", "==", user.displayName)
-        .orderBy("timestamp", "desc")
+      db.collection('posts')
+        .where('userEmail', '==', user.email)
+        .orderBy('timestamp', 'desc')
         .get()
         .then((data) => {
           const posts = [];
@@ -35,11 +36,11 @@ const MyPosts = ({ user }) => {
     }
   }, [user]);
 
-  console.log("posts is", posts);
+  console.log('posts is', posts);
 
   return (
     <div className={classes.container}>
-      <Typography variant="h3">My Posts</Typography>
+      <Typography variant='h3'>My Posts</Typography>
       {posts.map(({ id, post }) => (
         <Post
           key={id}
