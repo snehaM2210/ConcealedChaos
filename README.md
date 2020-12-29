@@ -14,10 +14,15 @@ Failure is not something to be ashamed off. We let you share your failures to th
 ### Features
 
 -community/network builder
+
 -user friendly interface
+
 -user experience and responsive design
+
 -Information/experience exchange 
+
 -Tackles real life challenges like depression, stress.
+
 -Powerful storytelling
 
 
