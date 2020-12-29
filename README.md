@@ -26,9 +26,39 @@ Failure is not something to be ashamed off. We let you share your failures to th
 -Powerful storytelling
 
 ### How  it can help the community
+
+Depression, stress, Anxiety etc. are very serious issues faced by the present generation, that are to be tackled. If these issues are not solved at right time they give a way to further problems that affects a person's health and career. We through our website help the people to interact with each other. (this would increase social interactivity) 
+
+We are more focused in finding the reasons for these above problems and to solve them together as a community. Our website is more or less like a social media app designed in such a way that people can share their story of lives, their success and failures. This would motivate others as well. 
+
+It is well said that "we learn through our failures" our website would enable others to showcase their failures and how they tackled over that. Failures are not something that is to be ashamed of so people would interact with each others and find a way to combat all the challenges.
+
+In short, a website that will spread positivity and a ray of sunshine to all the hopeless people. 
+
+### Workflow
 ### Software Used
-###Future Plans for Feature Enhancement
+
+Figma
+Illustrator
+Node.js
+React.js
+HTML
+CSS
+SCSS
+Reactstrap
+
+### Future Plans for Feature Enhancement
+
+We would add more features like 
+virtual interaction, councilling services, Linking  Motivational Podcasts, career guidance.
+
+
 ### Members
+
+Sneha Mallik
+Divya
+Parween
+Prachi Nandi
 
 
 
