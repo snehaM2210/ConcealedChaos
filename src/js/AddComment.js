@@ -1,36 +1,38 @@
-import React, { useState } from "react";
-import { db } from "./firebase";
-import firebase from "firebase";
-import { Button, TextField } from "@material-ui/core";
-import "../css/AddComment.css";
+import React, { useState } from 'react';
+import { db } from './firebase';
+import firebase from 'firebase';
+import { Button, TextField } from '@material-ui/core';
+import '../css/AddComment.css';
 
 function AddComment({ user, postId }) {
-  const [comment, setComment] = useState("");
+  const [comment, setComment] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (comment) {
-      db.collection("posts").doc(postId).collection("comments").add({
+      db.collection('posts').doc(postId).collection('comments').add({
         username: user.displayName,
         text: comment,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        pinned: false,
       });
     }
 
-    setComment("");
+    setComment('');
   };
 
+  console.log(comment);
   return (
-    <div className="addComment">
-      <form className="addComment__form">
+    <div className='addComment'>
+      <form className='addComment__form'>
         <TextField
-          type="text"
-          label="Add comment..."
+          type='text'
+          label='Add comment...'
           onChange={(e) => setComment(e.target.value)}
           value={comment}
         />
-        <Button type="submit" onClick={handleSubmit} disabled={!comment}>
+        <Button type='submit' onClick={handleSubmit} disabled={!comment}>
           Add
         </Button>
       </form>

@@ -12,7 +12,7 @@
 .post__header {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   font-size: 12px;
 }
 
@@ -45,6 +45,26 @@
 .post__text > strong {
   font-weight: 500;
   margin-right: 10px;
+}
+
+.post__bottom {
+  padding: 5px 20px;
+}
+
+.post__bottom-username {
+  color: black;
+}
+.post__bottom-caption {
+  font-size: 0.9rem;
+  color: #696969;
+}
+
+.post__icons {
+  padding: 25px 20px;
+}
+
+.post__icons-comment {
+  margin-left: 1rem !important;
 }
 
 @media (max-width: 600px) {
