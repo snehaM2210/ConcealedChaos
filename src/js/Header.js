@@ -73,26 +73,37 @@ const useStyles = makeStyles((theme) => ({
 function Header({ user, setUser }) {
   const classes = useStyles();
   const history = useHistory();
+
+  const [search, setSearch] = React.useState('');
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    history.push(`/posts/${search}`);
+    setSearch('');
+  };
+
   return (
     <div className={classes.grow}>
       <AppBar position='static'>
         <Toolbar>
-          <div style={{ cursor: 'pointer' }} nClick={() => history.push('/')}>
+          <div style={{ cursor: 'pointer' }} onClick={() => history.push('/')}>
             <Logo />
           </div>
-          <div className={classes.search}>
+          <form className={classes.search} onSubmit={handleSearch}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
             <InputBase
               placeholder='Search…'
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-          </div>
+          </form>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <Login user={user} setUser={setUser} />

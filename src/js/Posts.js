@@ -3,13 +3,13 @@ import '../css/Posts.css';
 import Post from './Post';
 import { db } from './firebase';
 
-function Posts({ user }) {
+function Posts({ user, sortBy }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     const unsub = db
       .collection('posts')
-      .orderBy('timestamp', 'desc')
+      .orderBy(sortBy, 'desc')
       .onSnapshot((snapshot) => {
         setPosts(
           snapshot.docs.map((doc) => ({
@@ -20,7 +20,11 @@ function Posts({ user }) {
       });
 
     return unsub;
-  }, []);
+  }, [sortBy]);
+
+  if (posts.length === 0) {
+    return <div className='posts'>Loading posts</div>;
+  }
 
   return (
     <div className='posts'>
@@ -41,5 +45,9 @@ function Posts({ user }) {
     </div>
   );
 }
+
+Posts.defaultProps = {
+  sortBy: 'latest',
+};
 
 export default Posts;

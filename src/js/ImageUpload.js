@@ -25,7 +25,7 @@ const allFailTypes = [
   'financial crisis',
   'poor performance',
   'boredom',
-  'confusion ',
+  'confusion',
   'unfair treatment',
   'career pressure',
   'uncracked interview',
@@ -91,6 +91,8 @@ function ImageUpload({ username, email }) {
         userName: checked.checkedA ? 'Anonymous' : username,
         failTags: fail,
         userEmail: email,
+        likesCount: 0,
+        commentsCount: 0,
       });
       setTitle('');
       setCaption('');

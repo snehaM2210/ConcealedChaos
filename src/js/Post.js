@@ -9,9 +9,10 @@ import Chip from '@material-ui/core/Chip';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import Backdrop from '@material-ui/core/Backdrop';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
+import { useHistory } from 'react-router-dom';
+import Snackbar from '@material-ui/core/Snackbar';
+import CloseIcon from '@material-ui/icons/Close';
 
 import '../css/Post.css';
 import { db } from './firebase';
@@ -49,36 +50,45 @@ function Post({
   tags,
   userEmail,
 }) {
+  const history = useHistory();
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
   const [likesCount, setLikesCount] = React.useState(null);
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [loading, setLoading] = React.useState(false);
+  const [snackbar, setSnackbar] = React.useState({ show: false, message: '' });
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
   const handleDelete = (postId) => {
-    setLoading(true);
     setAnchorEl(null);
     db.collection('posts')
       .doc(postId)
       .delete()
       .then(() => {
-        console.log('post deleted');
-        setLoading(false);
         setAnchorEl(null);
       })
       .catch((err) => {
-        setLoading(false);
-        console.err(err);
         setAnchorEl(null);
       });
   };
 
-  const likePost = () => {
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setSnackbar({ show: false, message: '' });
+  };
+
+  const likePost = async () => {
+    if (!user) {
+      setSnackbar({ show: true, message: 'Login to like a post' });
+      return;
+    }
     const postRef = db.collection('posts').doc(postId);
+    const post = await postRef.get().then((doc) => doc.data());
+    console.log('the post iss', post);
     postRef
       .collection('likes')
       .get()
@@ -89,12 +99,14 @@ function Post({
         if (userFound) {
           console.log('user found will delte ');
           await userFound.ref.delete();
+          postRef.update({ likesCount: post.likesCount - 1 });
         } else {
           console.log('user not found so will like');
           postRef.collection('likes').add({
             username: user.displayName,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
           });
+          postRef.update({ likesCount: post.likesCount + 1 });
         }
       });
   };
@@ -154,6 +166,7 @@ function Post({
               clickable
               color='secondary'
               variant='outlined'
+              onClick={() => history.push(`/posts/tags/${tag}`)}
             />
           ))}
       </div>
@@ -171,7 +184,16 @@ function Post({
         </Badge>
         <IconButton
           className='post__icons-comment'
-          onClick={() => setExpanded((expanded) => !expanded)}
+          onClick={() => {
+            if (!user) {
+              setSnackbar({
+                show: true,
+                message: 'Login to comment on a post',
+              });
+              return;
+            }
+            setExpanded((expanded) => !expanded);
+          }}
         >
           <ChatIcon color='primary' />
         </IconButton>
@@ -180,9 +202,27 @@ function Post({
         {user?.displayName && <AddComment {...{ user, postId }} />}
         <Comments postId={postId} user={user} postOwner={userName} />
       </Collapse>
-      <Backdrop className={classes.backdrop} open={loading}>
-        <CircularProgress color='inherit' />
-      </Backdrop>
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center',
+        }}
+        severity='info'
+        open={snackbar.show}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message={snackbar.message}
+        action={
+          <IconButton
+            size='small'
+            aria-label='close'
+            color='inherit'
+            onClick={handleClose}
+          >
+            <CloseIcon fontSize='small' />
+          </IconButton>
+        }
+      />
     </div>
   );
 }

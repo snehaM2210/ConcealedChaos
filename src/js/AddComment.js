@@ -17,6 +17,15 @@ function AddComment({ user, postId }) {
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         pinned: false,
       });
+      db.collection('posts')
+        .doc(postId)
+        .get()
+        .then((doc) => {
+          if (doc.exists) {
+            const commentsCount = doc.data().commentsCount;
+            doc.ref.update({ commentsCount: commentsCount + 1 });
+          }
+        });
     }
 
     setComment('');
