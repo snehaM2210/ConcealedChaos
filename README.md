@@ -13,22 +13,28 @@ Failure is not something to be ashamed off. We let you share your failures to th
 
 ### Features
 
--community/network builder
-<br/>-user friendly interface
-<br/>-user experience and responsive design
-<br/>-Information/experience exchange 
-<bt/>-Tackles real life challenges like depression, stress.
-<br/>-Powerful storytelling
+- Community/network builder
+<br/>- User friendly interface
+<br/>- User experience and responsive design
+<br/>- Information/experience exchange 
+<bt/>- Tackles real life challenges like depression, stress.
+<br/>- Powerful storytelling
+<br/>- Minimal requirements needed
+<br/>- Accessible from anywhere and anytime
+<br/>- Get instant insights
+<br/>- Access Control and User Management
+<br/>- Cloud-hosted platform
+<br/>- Eligible for all age groups
 
 ### How  it can help the community
 
-Depression, stress, Anxiety etc. are very serious issues faced by the present generation, that are to be tackled. If these issues are not solved at right time they give a way to further problems that affects a person's health and career. We through our website help the people to interact with each other. (this would increase social interactivity) 
+Depression, stress, anxiety etc. are very serious issues faced by the present generation, that has to be tackled. If these issues are not solved at right time they give a way to further problems that affects a person's health and career. We through our website help the people to interact with each other(this would also increase social interactivity).
 
 We are more focused in finding the reasons for these above problems and to solve them together as a community. Our website is more or less like a social media app designed in such a way that people can share their story of lives, their success and failures. This would motivate others as well. 
 
-It is well said that "we learn through our failures" our website would enable others to showcase their failures and how they tackled over that. Failures are not something that is to be ashamed of so people would interact with each others and find a way to combat all the challenges.
+It is well said that "we learn through our failures" our website would enable others to showcase their failures and how they tackled over that. Failures are not something that is to be ashamed of. So our website is a perfect platform for people to interact with each other and find a way to combat all the challenges.
 
-In short, a website that will spread positivity and a ray of sunshine to all the hopeless people. 
+In short, a website that will spread positivity and a ray of sunshine to all the hopeless and depressed people. 
 
 ### Workflow
 ### Software Used
@@ -39,14 +45,17 @@ Figma
 <br/>React.js
 <br/>HTML5
 <br/>CSS3
-<br/>SCSS
+<br/>JavaScript
 <br/>Reactstrap
 
 ### Future Plans for Feature Enhancement
 
-We would add more features like 
-virtual interaction, councilling services, Linking  Motivational Podcasts, career guidance.
-
+We would add more features like -<br/>
+<b>virtual interaction</b> <br/>
+<b>counselling services</b> <br/>
+<b>linking motivational podcasts</b> <br/>
+<b>career guidance</b> <br/>
+<b>live interactive sessions</b> ,etc.
 
 ### Team Members
 
