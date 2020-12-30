@@ -76,3 +76,7 @@ function increaseScore() {
     }
     scoreEl.innerHTML = `Score: ${score}`
 }
+
+$(document).ready(function(){
+    $(window).scrollTop(0);
+});
