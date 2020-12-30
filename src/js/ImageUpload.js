@@ -173,7 +173,7 @@ function ImageUpload({ username, email }) {
           <IconButton>
             <i className="fas fa-edit"></i>
           </IconButton>
-          <p>write a post</p>
+          <p>Tell us your story...</p>
         </div>
       </div>
       <Modal className="modal" open={open} onClose={handleClose}>
@@ -198,7 +198,7 @@ function ImageUpload({ username, email }) {
               type="text"
               id="capiton"
               fullWidth
-              label="Enter the caption..."
+              label="Enter your story..."
               value={caption}
               onChange={(e) => setCaption(e.target.value)}
             />
