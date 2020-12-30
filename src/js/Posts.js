@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import '../css/Posts.css';
-import Post from './Post';
-import { db } from './firebase';
+import React, { useState, useEffect } from "react";
+import "../css/Posts.css";
+import Post from "./Post";
+import { db } from "./firebase";
 
 function Posts({ user, sortBy }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     const unsub = db
-      .collection('posts')
-      .orderBy(sortBy, 'desc')
+      .collection("posts")
+      .orderBy(sortBy, "desc")
       .onSnapshot((snapshot) => {
         setPosts(
           snapshot.docs.map((doc) => ({
@@ -23,11 +23,11 @@ function Posts({ user, sortBy }) {
   }, [sortBy]);
 
   if (posts.length === 0) {
-    return <div className='posts'>Loading posts</div>;
+    return <div className="posts">Loading posts</div>;
   }
 
   return (
-    <div className='posts'>
+    <div className="posts" style={{ zIndex: 9999 }}>
       {posts.map(({ id, post }) => (
         <Post
           key={id}
@@ -47,7 +47,7 @@ function Posts({ user, sortBy }) {
 }
 
 Posts.defaultProps = {
-  sortBy: 'latest',
+  sortBy: "latest",
 };
 
 export default Posts;

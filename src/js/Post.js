@@ -3,7 +3,7 @@ import AddComment from "./AddComment";
 import Collapse from "@material-ui/core/Collapse";
 import ChatIcon from "@material-ui/icons/Chat";
 import firebase from "firebase";
-import { Avatar, Icon, IconButton, makeStyles } from "@material-ui/core";
+import { Avatar, IconButton, makeStyles } from "@material-ui/core";
 import Badge from "@material-ui/core/Badge";
 import Chip from "@material-ui/core/Chip";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
