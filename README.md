@@ -38,16 +38,26 @@ It is well said that "we learn through our failures" our website would enable ot
 In short, a website that will spread positivity and a ray of sunshine to all the hopeless and depressed people. 
 
 ### Workflow
+ # The website
+ Shares the stories of diverse people sharing a common story that is their success and failure stories. How they could gain victory over all the life challenges.
+ people can post their stories ananomously or transparently, while the readers can comment and upvote the posts. 
+ </br>It is to make others aware that life won't be easy you have to make it easy. Guidance from the experienced people would help others to shine.
+ 
+ # The quote generator
+"Reading quotes always fills our mind with positive energy".
+<br/>we added a quote generator application to our website so that whenever the readers feel low or feel demotivated they can use it to boost their energy.
+
+# stress reliever Game
+A game that would increase the focus and can give relief from stress.
+ 
 ### Software Used
 
-- Visual Studio Code
 - Figma
 - Illustrator
 - Node.js
 - React.js
 - HTML5
 - CSS3
-- Firebase
 - JavaScript
 - Reactstrap
 
@@ -59,6 +69,7 @@ We would add more features like -
 - linking motivational podcasts
 - career guidance
 - live interactive sessions, etc.
+- providing links of novels, songs, videos that gives positive energy.
 
 ### Team Members
 
