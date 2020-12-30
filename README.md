@@ -40,12 +40,14 @@ In short, a website that will spread positivity and a ray of sunshine to all the
 ### Workflow
 ### Software Used
 
+- Visual Studio Code
 - Figma
 - Illustrator
 - Node.js
 - React.js
 - HTML5
 - CSS3
+- Firebase
 - JavaScript
 - Reactstrap
 
