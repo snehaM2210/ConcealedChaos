@@ -71,8 +71,8 @@ We would add more features like -
 - counselling services
 - linking motivational podcasts
 - career guidance
-- live interactive sessions, etc.
-- providing links of novels, songs, videos that gives positive energy.
+- live interactive sessions
+- providing links of novels, songs, videos that gives positive energy, etc.
 
 ### Team Members
 
