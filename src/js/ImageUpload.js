@@ -164,6 +164,7 @@ function ImageUpload({ username, email }) {
     <div className="imageUpload">
       <div
         className="writePost__container"
+        style={{ zIndex: 9999 }}
         onClick={() => {
           setOpen(true);
         }}
