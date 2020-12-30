@@ -111,14 +111,11 @@ function App() {
           right: 0,
           width: "100%",
           height: "100vh",
-          opacity: 0.2,
+          // opacity: 0.2,
+          zIndex: -1,
         }}
       >
-        <img
-          style={{ width: "100%", height: "100%", zIndex: -1 }}
-          src={ReactLogo}
-          alt=""
-        />
+        <img style={{ width: "100%", height: "100%" }} src={ReactLogo} alt="" />
       </div>
     </div>
   );
