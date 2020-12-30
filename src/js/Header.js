@@ -36,7 +36,12 @@ function Header({ user, setUser }) {
   const history = useHistory();
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar
+        position="static"
+        style={{
+          background: "linear-gradient(45deg, #360167, #6B0772, #AF1281);",
+        }}
+      >
         <Toolbar>
           <div style={{ cursor: "pointer" }} onClick={() => history.push("/")}>
             <Logo />
