@@ -23,3 +23,8 @@
   max-width: 900px;
   /* margin: auto; */
 }
+.MuiAppBar-colorPrimary{
+  color: white;
+  background: linear-gradient(45deg, #360167, #6B0772, #AF1281) !important;
+}
+
