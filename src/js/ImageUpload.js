@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import firebase from 'firebase';
-import { db, storage } from './firebase';
+import React, { useState } from "react";
+import firebase from "firebase";
+import { db, storage } from "./firebase";
 import {
   Modal,
   Button,
@@ -9,63 +9,63 @@ import {
   IconButton,
   makeStyles,
   FormControlLabel,
-} from '@material-ui/core';
-import Chip from '@material-ui/core/Chip';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+} from "@material-ui/core";
+import Chip from "@material-ui/core/Chip";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
 
-import '../css/ImageUpload.css';
-import Switch from '@material-ui/core/Switch';
+import "../css/ImageUpload.css";
+import Switch from "@material-ui/core/Switch";
 
 const allFailTypes = [
-  'betrayal',
-  'health issues',
-  'financial crisis',
-  'poor performance',
-  'boredom',
-  'confusion',
-  'unfair treatment',
-  'career pressure',
-  'uncracked interview',
-  'uncracked entrance exam',
-  'no passion',
-  'failed relations',
-  'zero knowledge',
+  "betrayal",
+  "health issues",
+  "financial crisis",
+  "poor performance",
+  "boredom",
+  "confusion",
+  "unfair treatment",
+  "career pressure",
+  "uncracked interview",
+  "uncracked entrance exam",
+  "no passion",
+  "failed relations",
+  "zero knowledge",
 ];
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
-    minWidth: '100%',
+    minWidth: "100%",
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
   chips__container: {
-    display: 'flex',
-    alignItems: 'center',
-    flexWrap: 'wrap',
-    '& > *': {
+    display: "flex",
+    alignItems: "center",
+    flexWrap: "wrap",
+    "& > *": {
       margin: theme.spacing(0.5),
     },
   },
   input: {
-    marginBottom: '1rem',
+    marginBottom: "1rem",
   },
   switch: {
-    marginRight: 'auto',
+    marginRight: "auto",
   },
 }));
 
 function ImageUpload({ username, email }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState("");
   const [progress, setProgress] = useState(0);
-  const [title, setTitle] = useState('');
-  const [caption, setCaption] = useState('');
+  const [title, setTitle] = useState("");
+  const [caption, setCaption] = useState("");
   const [fail, setFail] = useState([]);
   const [checked, setChecked] = useState({
     checkedA: false,
@@ -84,18 +84,18 @@ function ImageUpload({ username, email }) {
   const handleFileUpload = (e) => {
     e.preventDefault();
     if (!image) {
-      db.collection('posts').add({
+      db.collection("posts").add({
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         title,
         caption,
-        userName: checked.checkedA ? 'Anonymous' : username,
+        userName: checked.checkedA ? "Anonymous" : username,
         failTags: fail,
         userEmail: email,
         likesCount: 0,
         commentsCount: 0,
       });
-      setTitle('');
-      setCaption('');
+      setTitle("");
+      setCaption("");
       setFail([]);
       setChecked({ checkedA: false });
       handleClose();
@@ -105,7 +105,7 @@ function ImageUpload({ username, email }) {
     const uploadTask = storage.ref(`images/${image.name}`).put(image);
 
     uploadTask.on(
-      'state_changed',
+      "state_changed",
       (snapshot) => {
         // progress function
         const progress = Math.round(
@@ -121,11 +121,11 @@ function ImageUpload({ username, email }) {
       () => {
         // complete function
         storage
-          .ref('images')
+          .ref("images")
           .child(image.name)
           .getDownloadURL()
           .then((url) => {
-            db.collection('posts').add({
+            db.collection("posts").add({
               timestamp: firebase.firestore.FieldValue.serverTimestamp(),
               title,
               caption,
@@ -137,7 +137,7 @@ function ImageUpload({ username, email }) {
 
             setImage(null);
             setProgress(true);
-            setCaption('');
+            setCaption("");
             setFail([]);
             handleClose();
           });
@@ -161,43 +161,44 @@ function ImageUpload({ username, email }) {
   console.log();
 
   return (
-    <div className='imageUpload'>
+    <div className="imageUpload">
       <div
-        className='writePost__container'
+        className="writePost__container"
+        style={{ zIndex: 9999 }}
         onClick={() => {
           setOpen(true);
         }}
       >
-        <div className='writePost__main'>
+        <div className="writePost__main">
           <IconButton>
-            <i className='fas fa-edit'></i>
+            <i className="fas fa-edit"></i>
           </IconButton>
           <p>write a post</p>
         </div>
       </div>
-      <Modal className='modal' open={open} onClose={handleClose}>
+      <Modal className="modal" open={open} onClose={handleClose}>
         <div>
-          <form className='modal__body' onSubmit={handleFileUpload}>
-            <h2 style={{ marginRight: 'auto', marginBottom: '1rem' }}>
+          <form className="modal__body" onSubmit={handleFileUpload}>
+            <h2 style={{ marginRight: "auto", marginBottom: "1rem" }}>
               Create A Post
             </h2>
             <TextField
               className={classes.input}
               required
-              type='text'
-              id='title'
+              type="text"
+              id="title"
               fullWidth
-              label='Title of your fail'
+              label="Title of your fail"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
             <TextField
               className={classes.input}
               required
-              type='text'
-              id='capiton'
+              type="text"
+              id="capiton"
               fullWidth
-              label='Enter the caption...'
+              label="Enter the caption..."
               value={caption}
               onChange={(e) => setCaption(e.target.value)}
             />
@@ -206,20 +207,20 @@ function ImageUpload({ username, email }) {
                 fail.map((eachFail) => (
                   <Chip
                     key={`${eachFail}-${Math.round(Math.random() * 999999)}`}
-                    color='primary'
+                    color="primary"
                     label={eachFail}
                     onDelete={() => handleChipDelete(eachFail)}
                   />
                 ))}
             </div>
             <FormControl className={classes.formControl}>
-              <InputLabel id='demo-simple-select-label'>
+              <InputLabel id="demo-simple-select-label">
                 Potential reasons / relevant tags for failure
               </InputLabel>
               <Select
-                labelId='demo-simple-select-label'
-                id='demo-simple-select'
-                value={''}
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={""}
                 onChange={handleChange}
               >
                 {allFailTypes.map((eachFail) => (
@@ -238,31 +239,31 @@ function ImageUpload({ username, email }) {
                 <Switch
                   checked={checked.checkedA}
                   onChange={handleChangeAnonymous}
-                  name='checkedA'
-                  inputProps={{ 'aria-label': 'secondary checkbox' }}
+                  name="checkedA"
+                  inputProps={{ "aria-label": "secondary checkbox" }}
                 />
               }
-              label='Post anonymously'
+              label="Post anonymously"
             />
 
-            <div className='modal__formButtons'>
-              <Button component='label' variant='outlined' color='secondary'>
+            <div className="modal__formButtons">
+              <Button component="label" variant="outlined" color="secondary">
                 Choose File *
                 <input
-                  type='file'
-                  name='file'
-                  id='file'
-                  accept='image/*'
-                  style={{ display: 'none' }}
+                  type="file"
+                  name="file"
+                  id="file"
+                  accept="image/*"
+                  style={{ display: "none" }}
                   onChange={handleFileChange}
                 />
               </Button>
-              <Button type='submit' variant='contained' color='primary'>
+              <Button type="submit" variant="contained" color="primary">
                 submit
               </Button>
             </div>
             {image ? (
-              <div className='imageUpload__text'>
+              <div className="imageUpload__text">
                 <span>
                   file choosen <i>{image?.name}</i>
                 </span>
@@ -270,13 +271,13 @@ function ImageUpload({ username, email }) {
             ) : null}
             {progress > 0 && (
               <div
-                style={{ width: '100%', display: 'block', marginTop: '2rem' }}
+                style={{ width: "100%", display: "block", marginTop: "2rem" }}
               >
                 <LinearProgress
-                  variant='determinate'
+                  variant="determinate"
                   value={50}
-                  className='imageUpload__progress'
-                  max='100'
+                  className="imageUpload__progress"
+                  max="100"
                 />
               </div>
             )}

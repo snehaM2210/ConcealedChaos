@@ -136,6 +136,22 @@ export default function Login({ user, setUser }) {
         <>
           <Button
             type="button"
+            as="a"
+            href="https://concealedchaosgame.netlify.app/"
+            className={classes.nav__button}
+          >
+            game
+          </Button>
+          <Button
+            type="button"
+            as="a"
+            href="https://concealedchaosquote.netlify.app/"
+            className={classes.nav__button}
+          >
+            quotes
+          </Button>
+          <Button
+            type="button"
             className={classes.nav__button}
             onClick={() => {
               setOpen(true);

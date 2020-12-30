@@ -37,7 +37,7 @@ function Header({ user, setUser }) {
   return (
     <div className={classes.grow}>
       <AppBar
-        position="static"
+        position="fixed"
         style={{
           background: "linear-gradient(45deg, #360167, #6B0772, #AF1281);",
         }}

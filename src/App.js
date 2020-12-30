@@ -7,8 +7,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import ReactLogo from "./img/bubbles.svg";
-// import Particles from "react-particles-js";
+import Bubbles from "./img/bubbles.svg";
 
 import "./css/App.css";
 import "./css/elements.css";
@@ -22,17 +21,6 @@ function App() {
   const history = useHistory();
   const location = useLocation();
   const paths = ["/"];
-  const particlesOptions = {
-    particles: {
-      number: {
-        value: 80,
-        density: {
-          enable: true,
-          value_area: 800,
-        },
-      },
-    },
-  };
 
   const [sortBy, setSortBy] = React.useState("timestamp");
 
@@ -43,8 +31,26 @@ function App() {
   return (
     <div className="app">
       <Header user={user} setUser={setUser} />
+      <img
+        src={Bubbles}
+        style={{
+          position: "fixed",
+          height: "100%",
+          width: "100%",
+          opacity: 0.5,
+        }}
+        alt=""
+      />
+
       <div className="sort__container">
-        <FormControl style={{ width: "25%", marginLeft: "auto" }}>
+        <FormControl
+          style={{
+            width: "25%",
+            marginLeft: "auto",
+            top: "70px",
+            left: "200px",
+          }}
+        >
           <InputLabel id="demo-simple-select-label">Sort By</InputLabel>
           <Select
             labelId="demo-simple-select-label"
@@ -59,6 +65,7 @@ function App() {
           </Select>
         </FormControl>
       </div>
+
       {!paths.includes(location.pathname) && (
         <div
           style={{ cursor: "pointer", margin: "1rem" }}
@@ -101,22 +108,6 @@ function App() {
           render={(routeProps) => <TaggedPosts user={user} {...routeProps} />}
         />
       </Switch>
-      <div
-        style={{
-          background: "pink",
-          position: "fixed",
-          top: 0,
-          left: 0,
-          bottom: 0,
-          right: 0,
-          width: "100%",
-          height: "100vh",
-          // opacity: 0.2,
-          zIndex: -1,
-        }}
-      >
-        <img style={{ width: "100%", height: "100%" }} src={ReactLogo} alt="" />
-      </div>
     </div>
   );
 }
