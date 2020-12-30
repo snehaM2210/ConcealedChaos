@@ -73,6 +73,17 @@ export default function Login({ user, setUser }) {
     <div>
       {user ? (
         <>
+          <Button
+            type="button"
+            as="a"
+            href="https://concealedchaosgame.netlify.app/"
+            className={classes.nav__button}
+          >
+            game
+          </Button>
+          <Button type="button" as="a" href="" className={classes.nav__button}>
+            quotes
+          </Button>
           <IconButton
             edge="end"
             aria-label="account of current user"
