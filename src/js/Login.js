@@ -81,7 +81,12 @@ export default function Login({ user, setUser }) {
           >
             game
           </Button>
-          <Button type="button" as="a" href="" className={classes.nav__button}>
+          <Button
+            type="button"
+            as="a"
+            href="https://concealedchaosquote.netlify.app/"
+            className={classes.nav__button}
+          >
             quotes
           </Button>
           <IconButton
