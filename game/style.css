@@ -5,7 +5,8 @@
 }
 
 body {
-  background-color: #12004c;
+  /* background-color: #360167; */
+  background: linear-gradient(#360167,#af1281);
   color: #fff;
   font-family: 'Press Start 2P', sans-serif;
   height: 100vh;
@@ -19,6 +20,7 @@ a {
 }
 
 h1 {
+  display: inline-block;
   line-height: 1.4;
 }
 
@@ -40,6 +42,7 @@ h1 {
 }
 
 .screen {
+  background: linear-gradient(#360167,#af1281);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,6 +95,8 @@ h1 {
 
 .game-container {
   position: relative;
+  border: 2em solid #000;
+  background: linear-gradient(#360167,#af1281);
 }
 
 .time,
@@ -114,12 +119,15 @@ h1 {
   width: 100%;
   padding: 20px;
   z-index: 100;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   opacity: 0;
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -150%);
+  transform: translate(-50%, 150%);
   transition: transform 0.4s ease-in;
 }
 
@@ -148,3 +156,36 @@ h1 {
   width: 100px;
   height: 100px;
 }
+
+@media (max-width:768px){
+  .choose-insect-btn img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
+  h1{
+    align-items: center;
+  }
+  p{
+    align-items: center;
+  }
+  .insect img{
+    width: 20%;
+    height: 20%;
+  }
+  p #time .time{
+    left: 5px;
+    font-size: 1rem;
+  }
+  .score{
+    right: 5px;
+  }
+}
+
+/* .btnn{
+  padding: 20px 10px;
+  background: black;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+} */
