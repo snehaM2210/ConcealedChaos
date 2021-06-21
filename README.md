@@ -1,7 +1,6 @@
 # Aimed for- Hack Nagpur
 # Project- ConcealedChaos
 
-## ConcealedChaos
 <p align="center">
 <img src="src/img/logo1.jpg" width="300" height="300" >
 </p>
